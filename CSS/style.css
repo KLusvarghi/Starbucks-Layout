@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+:root {/*Tudo o que eu colocar aqui dentro vai servir para o documento todo*/
+
+  --verdePadão: #017143;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*Colocando essa regra por conta que o NAVEGADOR por padrão aplica margin e paddig automaticamente para gente, tirando isso e começando do zero*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+  display: flex; /*Para que as caixas sejam flexiveis e fiquem na mesma linha*/
+  flex-wrap: wrap; /*flex-wrap: nowrap quer dizer que por padrão vai tentar deixar tudo na mesma linha, irá forçar e não vai mudar de linha.   agora o flex-wrap: wrap eu consigo manipular as dimenções e se não tiver espaço ele cai para a proxima linha */
+  max-width: 1280px; /*para limitar o contexto */
+  margin: 0px auto; /*auto para que fique centralizado*/
+  padding: 0 2%; /*para que não fique grudado*/
+}
+
+html, body {
+  height: 100%; /*quero dizer que o conteudo maximo da minha janela é a janela em si, sendo de 100%, não permitindo nada alem disso, não tendo conteudo pra baixo, não tendo scrollbar*/
+  overflow-y: hidden; /*eixo vertical*/
+  overflow-x: hidden; /*eixo horizontal*/
+}
+
+header {
+  height: 200px;
+  padding: 40px 0;
+}
+
+.logo {
+  width: 50%;
+}
+
+.menu {
+  padding-top: 30px; /*espaçamento das letras para o teto*/
+  width: 50%;
+  text-align: right; /*jogar tudo dentro do meu nav para a direita*/
+}
+
+.menu a {
+  /*tudo que estiver dentro de menu que for a será executado*/
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+section.sobre {
+  height: calc(100% - 200px); /*calcular o calc*/
+  position: relative; /*tendo uma posição relativa ao contexto*/
+}
+
+.extras { /*Fazer a area verde*/
+  position: absolute;
+  bottom: -450px; /*tamanho em baixo*/
+  right: -500px; /*tamanho a direita*/
+  width: 1200px; /*tamanho da largura*/
+  height: 1200px; /*tamanho da altura*/
+  border-radius: 50%; /*arredondar a caixa*/
+  background-color: var(--verdePadão); 
+}
+
+.social-media {
+  position: absolute;
+  right: 510px; /*por a gente estar tirando em ".extra"se deixar em right: 0; ele não irá aparecer, então pasta colocar o que tiramos na class .xtras*/
+  top: 200px; /*para descer a imagem, sendo 200px de distancia para o TOPO*/
+}
+
+.social-media img {
+  display: block; /*para que eles não fiquem na mesma linha, dando um display "block"*/
+  width: 20px; /*para o tamanho maximo da imagem, "largura"*/
+  margin: 20px 0; /*a distancia de uma imagem para outra*/
+}
+
+.texto-sobre {
+  margin-top: 100px;
+}
+
+.texto-sobre h1 {
+  font-size: 54px;
+  color: rgba(0, 0, 0, 0.76);
+}
+
+.texto-sobre #texto-h1{
+    font-size: 68px
+}
+
+.texto-sobre p {
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.76);
+  font-size: 14px;
+  font-weight: bold; /*deixar a letra em negrito*/
+  max-width: 550px; /*para não ultrapassar o circulo verde */
+}
+
+.texto-sobre #botao {
+  border: 0; /*Para tirar aa borda padão que fica no botão*/
+  background-color: var(--verdePadão);
+  color: white;
+  font-size: 17px;
+  font-weight: lighter;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer; /*Para o usuário saber que é CLICAVEL*/
+}
