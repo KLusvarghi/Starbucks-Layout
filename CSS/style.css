@@ -59,8 +59,8 @@ section.sobre {
   position: absolute;
   bottom: -450px; /*tamanho em baixo*/
   right: -500px; /*tamanho a direita*/
-  width: 1200px; /*tamanho da largura*/
-  height: 1200px; /*tamanho da altura*/
+  width: 1000px; /*tamanho da largura*/
+  height: 1100px; /*tamanho da altura*/
   border-radius: 50%; /*arredondar a caixa*/
   background-color: var(--verdePadão); 
 }
