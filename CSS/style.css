@@ -50,6 +50,11 @@ header {
   margin-left: 40px;
 }
 
+.menu a:hover {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.597);
+}
+
 section.sobre {
   height: calc(100% - 200px); /*calcular o calc*/
   position: relative; /*tendo uma posição relativa ao contexto*/
@@ -75,7 +80,10 @@ section.sobre {
   display: block; /*para que eles não fiquem na mesma linha, dando um display "block"*/
   width: 20px; /*para o tamanho maximo da imagem, "largura"*/
   margin: 20px 0; /*a distancia de uma imagem para outra*/
+  cursor: pointer;
 }
+
+
 
 .texto-sobre {
   margin-top: 100px;
@@ -108,4 +116,8 @@ section.sobre {
   width: 150px;
   height: 40px;
   cursor: pointer; /*Para o usuário saber que é CLICAVEL*/
+}
+
+.texto-sobre #botao:hover {
+  background-color:#014f2e;
 }
